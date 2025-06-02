@@ -1,9 +1,4 @@
-import {
-  type RouteConfig,
-  index,
-  layout,
-  route,
-} from "@react-router/dev/routes";
+import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
 /*
 - Unauthed routes
@@ -19,15 +14,17 @@ import {
 */
 
 export default [
-  // unauthed
-  index("routes/welcome.tsx"),
-  route("/login", "routes/login.tsx"),
-  route("/register", "routes/register.tsx"),
-  // authed
-  layout("dashboard.tsx", [
-    route("/home", "routes/home.tsx"),
-    route("/maps", "routes/maps.tsx"),
-    route("/profile", "routes/profile.tsx"),
-    route("/viewer", "routes/viewer.tsx"),
-  ]),
+    // unauthed
+    index("welcome/welcome.tsx"),
+    route("/login", "user/login.tsx"),
+    route("/logout", "user/logout.ts"),
+    route("/register", "user/register.tsx"),
+    // TODO - implement other routes,
+    // // authed
+    // layout("layouts/dashboard.tsx", [
+    //   route("/home", "routes/home.tsx"),
+    //   route("/maps", "routes/maps.tsx"),
+    //   route("/profile", "routes/profile.tsx"),
+    //   route("/viewer", "routes/viewer.tsx"),
+    // ]),
 ] satisfies RouteConfig;

@@ -10,7 +10,10 @@ export default [
   },
   {
     languageOptions: {
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.pluginReact,
+      },
     },
   },
   pluginJs.configs.recommended,

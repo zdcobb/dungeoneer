@@ -1,6 +1,7 @@
 .DS_Store
 .yarn
 /node_modules/
+**/secrets.ts
 
 # React Router
 /.react-router/
